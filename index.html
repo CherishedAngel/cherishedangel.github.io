@@ -504,7 +504,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 					
 		
 		<div class="elementor-element elementor-element-208ea84d e-flex e-con-boxed wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no wpr-column-slider-no wpr-equal-height-no e-con e-parent" data-id="208ea84d" data-element_type="container" data-e-type="container">
-					<div class="e-con-inner">
+					<div class="e-con-inner elementor-618">
 				<div class="elementor-element elementor-element-65f8f48a elementor-widget elementor-widget-heading" data-id="65f8f48a" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
 					<div class="elementor-heading-title elementor-size-default"><div style="display:flex;align-items:center;justify-content:center;gap:18px;margin:40px 0">
@@ -1768,29 +1768,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <link rel="stylesheet" id="e-animation-zoomIn-css" href="/wp-content/plugins/elementor/assets/lib/animations/styles/zoomIn.min.css?ver=4.2.4" media="all">
 <link rel="stylesheet" id="wpr-button-animations-css-css" href="/wp-content/plugins/royal-elementor-addons/assets/css/lib/animations/button-animations.min.css?ver=1.7.1067" media="all">
 <link rel="stylesheet" id="elementor-icons-ekiticons-css" href="/wp-content/plugins/elementskit-lite/modules/elementskit-icon-pack/assets/css/ekiticons.css?ver=4.0.5" media="all">
-<script id="essential-blocks-blocks-localize-js-extra">
-var eb_conditional_localize = [];
-var EssentialBlocksLocalize = {"eb_plugins_url":"/wp-content/plugins/essential-blocks/","image_url":"/wp-content/plugins/essential-blocks/assets/images","eb_wp_version":"7.1","eb_version":"6.4.3","eb_admin_url":"/wp-admin/","rest_rootURL":"/wp-json/","ajax_url":"/wp-admin/admin-ajax.php","nft_nonce":"a3eb07c454","post_grid_pagination_nonce":"1646af612a","placeholder_image":"/wp-content/plugins/essential-blocks/assets/images/placeholder.png","is_pro_active":"false","upgrade_pro_url":"https://essential-blocks.com/upgrade","responsiveBreakpoints":{"tablet":1024,"mobile":767},"wp_timezone":"+02:00","gmt_offset":"2"};
-//# sourceURL=essential-blocks-blocks-localize-js-extra
-</script>
-<script id="essential-blocks-blocks-localize-js" src="/wp-content/plugins/essential-blocks/assets/js/eb-blocks-localize.js?ver=31d6cfe0d16ae931b73c"></script>
 <script id="wp-hooks-js" src="/wp-includes/js/dist/hooks.min.js?ver=f0f188028580e8dc1255"></script>
 <script id="wp-i18n-js" src="/wp-includes/js/dist/i18n.min.js?ver=1dfe7db3940c23ea9216"></script>
 <script id="wp-i18n-js-after">
 wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
 //# sourceURL=wp-i18n-js-after
 </script>
-<script id="swv-js" src="/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=6.1.7"></script>
-<script id="contact-form-7-js-before">
-var wpcf7 = {
-    "api": {
-        "root": "\/wp-json\/",
-        "namespace": "contact-form-7\/v1"
-    }
-};
-//# sourceURL=contact-form-7-js-before
-</script>
-<script id="contact-form-7-js" src="/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.1.7"></script>
 <script id="angie-canvas-template-js-before">
 angieCanvasTemplateData = {"templateSlug":"angie-canvas"};
 //# sourceURL=angie-canvas-template-js-before
@@ -1844,6 +1827,25 @@ var WprConfig = {"ajaxurl":"/wp-admin/admin-ajax.php","resturl":"/wp-json/wpradd
 //# sourceURL=wpr-addons-js-js-extra
 </script>
 <script id="wpr-addons-js-js" data-cfasync="false" src="/wp-content/plugins/royal-elementor-addons/assets/js/frontend.min.js?ver=1.7.1067"></script>
+<script id="static-wpr-advanced-slider-init">
+(function($) {
+    function initializeExportedAdvancedSlider() {
+        $('.elementor-widget-wpr-advanced-slider').each(function() {
+            var $scope = $(this);
+            var $slider = $scope.find('.wpr-advanced-slider');
+
+            if ($slider.length && !$slider.hasClass('slick-initialized') && window.elementorFrontend && elementorFrontend.hooks) {
+                elementorFrontend.hooks.doAction('frontend/element_ready/wpr-advanced-slider.default', $scope);
+            }
+        });
+    }
+
+    $(window).on('elementor/frontend/init', function() {
+        window.setTimeout(initializeExportedAdvancedSlider, 0);
+    });
+    $(initializeExportedAdvancedSlider);
+})(jQuery);
+</script>
 <script id="wpr-modal-popups-js-js" src="/wp-content/plugins/royal-elementor-addons/assets/js/modal-popups.min.js?ver=1.7.1067"></script>
 <script id="wp-emoji-settings" type="application/json">
 {"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"/wp-includes/js/wp-emoji-release.min.js?ver=7.1"}}
