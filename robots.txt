@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /wp-admin/
-Allow: /wp-admin/admin-ajax.php
+Allow: /
 
-Sitemap: http://annuschabotesportfolio.local/sitemap_index.xml
+Sitemap: https://cherishedangel.github.io/sitemap.xml
